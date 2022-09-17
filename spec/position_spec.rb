@@ -1,11 +1,11 @@
 require_relative 'spec_helper'
 describe Position do
 
+  let!(:position) { Position.new(0, 0, 'east') }
   describe 'initialize' do
     context 'valid arguments' do
       it 'properly' do
-        position = Position.new(0, 0, 'east')
-      expect(position.facing_direction).to eq(:east)
+        expect(position).to be_a(Position)
       end
     end
 
@@ -16,15 +16,12 @@ describe Position do
     end
   end
 
-
   describe 'turn direction' do
     it 'left returns next direction' do
-      position = Position.new(0, 0, 'east')
       expect(position.turn_left).to eq(:north)
     end
 
     it 'right returns next direction' do
-      position = Position.new(0, 0, 'east')
       expect(position.turn_right).to eq(:south)
     end
   end

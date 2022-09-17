@@ -11,7 +11,7 @@ require_relative 'commands/right'
 require_relative 'handlers/invalid_command_error'
 require_relative 'handlers/invalid_command_sequence_error'
 
-require_relative 'validators/valid_command_sequence.rb'
+require_relative 'validators/valid_command_sequence'
 
 table = Table.new(5,5)
 robot = Robot.new

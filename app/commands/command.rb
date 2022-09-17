@@ -14,7 +14,7 @@ module Commands
     private
 
     def extract_class_name
-      self.class.name.split("::").last
+      self.class.name.split('::').last
     end
 
   end

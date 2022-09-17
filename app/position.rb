@@ -2,7 +2,7 @@ class Position
 
   attr_accessor :x_pos, :y_pos, :facing_direction
 
-  DIRECTIONS = %i(east west north south)
+  DIRECTIONS = %i[east west north south].freeze
 
   LEFT_TRACKS  = { north: :west, west: :south, south: :east, east: :north }.freeze
   RIGHT_TRACKS = LEFT_TRACKS.invert.freeze

@@ -18,7 +18,7 @@ TABLE_WIDTH = 5
 table = Table.new(TABLE_LENGTH, TABLE_WIDTH)
 robot = Robot.new
 
-prompt = "> "
+prompt = '> '
 puts <<~HEREDOC
   Initialized table with #{TABLE_LENGTH} and #{TABLE_WIDTH}
   valid commands are
@@ -32,6 +32,6 @@ puts <<~HEREDOC
 HEREDOC
 
 reader = InputReader.new(robot, table)
-while buffer = Readline.readline(prompt, true)
+while (buffer = Readline.readline(prompt, true))
   reader.parse_command(buffer)
 end
