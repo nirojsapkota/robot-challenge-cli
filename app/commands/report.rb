@@ -1,5 +1,5 @@
 module Commands
-    class Report < Command
+  class Report < Command
     def run
       super
       puts @robot.report

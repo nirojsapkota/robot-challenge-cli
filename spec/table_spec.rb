@@ -1,7 +1,6 @@
 require_relative 'spec_helper'
 describe Table do
-
-  let!(:table) { described_class.new(5,5)}
+  let!(:table) { described_class.new(5, 5) }
 
   describe 'initialize' do
     it 'initializes successfully' do
@@ -20,7 +19,4 @@ describe Table do
       expect(table.position_valid?(position)).to eq(false)
     end
   end
-
 end
-
-

@@ -1,5 +1,5 @@
 module Commands
-    class Move < Command
+  class Move < Command
     def run
       super
       next_position = @robot.current_position.move

@@ -1,5 +1,4 @@
 class Robot
-
   attr_accessor :current_position
 
   def initialize
@@ -23,5 +22,4 @@ class Robot
   def std_output(position)
     "#{position.x_pos}, #{position.y_pos} #{position.facing_direction.upcase}"
   end
-
 end

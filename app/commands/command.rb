@@ -8,7 +8,7 @@ module Commands
     end
 
     def run
-      raise InvalidCommandSequenceError.new "Invalid command sequence #{extract_class_name}" unless @robot.valid_position?
+      raise InvalidCommandSequenceError, "Invalid command sequence #{extract_class_name}" unless @robot.valid_position?
     end
 
     private
@@ -16,6 +16,5 @@ module Commands
     def extract_class_name
       self.class.name.split('::').last
     end
-
   end
 end

@@ -1,2 +1,2 @@
-class InvalidCommandError < Exception
+class InvalidCommandError < StandardError
 end

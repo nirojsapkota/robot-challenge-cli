@@ -1,5 +1,4 @@
 class Position
-
   attr_accessor :x_pos, :y_pos, :facing_direction
 
   DIRECTIONS = %i[east west north south].freeze
@@ -11,12 +10,14 @@ class Position
     @x_pos = x_pos
     @y_pos = y_pos
 
-    raise InvalidCommandError.new "Invalid direction #{facing_direction}" unless DIRECTIONS.include?(facing_direction.to_sym)
+    unless DIRECTIONS.include?(facing_direction.to_sym)
+      raise InvalidCommandError, "Invalid direction #{facing_direction}"
+    end
 
     @facing_direction = facing_direction.to_sym
   end
 
-  # returns next driving direction
+  # returns next facing direction
   def turn_left
     LEFT_TRACKS[facing_direction]
   end
@@ -45,5 +46,4 @@ class Position
       [x_pos - 1, y_pos]
     end
   end
-
 end

@@ -1,2 +1,2 @@
-class InvalidCommandSequenceError < Exception
+class InvalidCommandSequenceError < StandardError
 end

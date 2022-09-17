@@ -1,6 +1,5 @@
 require_relative 'spec_helper'
 describe Position do
-
   let!(:position) { Position.new(0, 0, 'east') }
   describe 'initialize' do
     context 'valid arguments' do
@@ -11,7 +10,7 @@ describe Position do
 
     context 'invalid arguments' do
       it 'raises exception for invalid direction' do
-        expect{ Position.new(0, 0, 'eeast') }.to raise_error(InvalidCommandError)
+        expect { Position.new(0, 0, 'eeast') }.to raise_error(InvalidCommandError)
       end
     end
   end
@@ -32,5 +31,3 @@ describe Position do
     end
   end
 end
-
-

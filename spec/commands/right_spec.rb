@@ -1,10 +1,9 @@
 require_relative '../spec_helper'
 describe Commands::Right do
-
   let(:robot) { Robot.new }
   let(:table) { Table.new(5, 5) }
 
-  describe "executing right command" do
+  describe 'executing right command' do
     direction = Position::RIGHT_TRACKS
     direction.each do |dir, next_dir|
       it "returns #{next_dir}" do

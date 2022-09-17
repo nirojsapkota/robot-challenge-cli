@@ -13,6 +13,6 @@ require_relative 'handlers/invalid_command_sequence_error'
 
 require_relative 'validators/valid_command_sequence'
 
-table = Table.new(5,5)
+table = Table.new(5, 5)
 robot = Robot.new
 InputReader.new(robot, table).read_file(ARGF)
