@@ -1,0 +1,2 @@
+class InvalidCommandSequenceError < Exception
+end
