@@ -31,6 +31,7 @@ class InputReader
     case command
     when 'place'
       raise InvalidCommandError.new 'PLACE X,Y,F format not supplied' unless args.length == 3
+
       Commands::Place.new(@robot, @table, Position.new(*cast_to_int(args)))
     when *VALID_COMMANDS
       Object.const_get("Commands::#{command.capitalize}").new(@robot, @table)

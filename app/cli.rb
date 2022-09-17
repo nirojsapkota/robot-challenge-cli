@@ -19,16 +19,16 @@ table = Table.new(TABLE_LENGTH, TABLE_WIDTH)
 robot = Robot.new
 
 prompt = "> "
-puts <<HEREDOC
-Initialized table with #{TABLE_LENGTH} and #{TABLE_WIDTH}
-valid commands are
-1. PLACE X,Y,F
-2. MOVE
-3. LEFT
-4. RIGHT
-5. REPORT
-6. CTRL + C to exit
-START simulating.............
+puts <<~HEREDOC
+  Initialized table with #{TABLE_LENGTH} and #{TABLE_WIDTH}
+  valid commands are
+  1. PLACE X,Y,F
+  2. MOVE
+  3. LEFT
+  4. RIGHT
+  5. REPORT
+  6. CTRL + C to exit
+  START simulating.............
 HEREDOC
 
 reader = InputReader.new(robot, table)

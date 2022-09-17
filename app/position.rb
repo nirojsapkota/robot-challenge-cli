@@ -12,6 +12,7 @@ class Position
     @y_pos = y_pos
 
     raise InvalidCommandError.new "Invalid direction #{facing_direction}" unless DIRECTIONS.include?(facing_direction.to_sym)
+
     @facing_direction = facing_direction.to_sym
   end
 
